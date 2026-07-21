@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pier Sixty-Six Department Monopoly</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app-shell">
+
+    <section class="header-row no-controls-header">
+      <div class="main-title-block">
+        <div class="main-title-kicker">Pier Sixty-Six</div>
+        <h1 class="main-title">Department Monopoly</h1>
+      </div>
+    </section>
+
+    <section id="seasonBanner" class="season-banner" aria-label="Current competition period"></section>
+    <section id="board" class="board-grid" aria-label="Department Monopoly board"></section>
+    <section id="progressOverview" class="progress-card" aria-label="Monthly progress overview"></section>
+
+    <section class="rankings-card">
+      <div class="rankings-header">
+        <div class="rankings-title-block">
+          <h2>Department Rankings</h2>
+        </div>
+        <div id="departmentCount" class="department-count"></div>
+      </div>
+
+      <div id="rankings" class="rankings-grid"></div>
+    </section>
+    <section id="statusLegendPanel" class="status-legend-panel" aria-label="Status counts and scoring legend"></section>
+
+    <section id="withinReachPanel" class="within-reach-panel" aria-label="Departments within reach of the next tier"></section>
+
+    <section id="moversInsights" class="movers-card" aria-label="Weekly movement highlights"></section>
+
+    <section class="info-card">
+
+      <div class="info-section-title">
+        <div class="info-title-kicker">Game Information</div>
+        <h2>Rules &amp; Rewards</h2>
+      </div>
+
+      <div class="info-panel program-panel">
+        <h3>Program Overview</h3>
+
+        <div class="overview-grid">
+
+          <div class="overview-item">
+            <div class="overview-label">Monthly Winner</div>
+            <div class="overview-copy">
+              Best average score across the month.
+            </div>
+          </div>
+
+          <div class="overview-item">
+            <div class="overview-label">Yearly Winner</div>
+            <div class="overview-copy">
+              Best average score across all weeks.
+            </div>
+          </div>
+
+         <div class="overview-item scoring-item">
+    <div class="overview-label">Scoring Guide</div>
+
+    <div class="overview-copy scoring-guide">
+        <span>90–100+ Excellent</span>
+        <span class="divider">|</span>
+
+        <span>80–89 Strong</span>
+        <span class="divider">|</span>
+
+        <span>70–79 Good</span>
+        <span class="divider">|</span>
+
+        <span>&lt;70 Needs Support</span>
+    </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="info-panel rewards-panel">
+
+        <div class="rewards-heading-row">
+          <div>
+            <h3>Flexible Reward Options</h3>
+            <p>
+              Each month, Division winners can choose from a variety of rewards, including:
+            </p>
+          </div>
+
+        </div>
+
+        <ul class="rewards-list">
+          <li>2 floating holidays</li>
+          <li>Zenova Spa experience, up to a $500 value</li>
+          <li>Dining certificate to a signature restaurant, up to a $500 value</li>
+          <li>Cash prize, $500</li>
+          <li>Premium electronics, up to a $500 value</li>
+          <li>Two-night stay at a sister property</li>
+          <li>Gift card, up to a $500 value</li>
+        </ul>
+
+        <div class="subsection-divider"></div>
+
+        <h3>End-of-Year Grand Prize</h3>
+        <p>
+          The overall top performer for each division will receive the following:
+        </p>
+
+        <ul class="rewards-list">
+          <li>Trip to the CoralTree Leadership Forum for professional development and networking</li>
+          <li>$1,000 cash prize</li>
+          <li>Two additional nights at the resort</li>
+        </ul>
+
+        <div class="subsection-divider"></div>
+
+        <h3>Motivation &amp; Engagement</h3>
+        <p>
+          This program ties rewards directly to performance, driving accountability, engagement, and continuous improvement.
+        </p>
+
+      </div>
+
+    </section>
+<section class="questions-card">
+  <details class="questions-details">
+    <summary class="questions-summary">
+      <span>Questions? How the Game Works</span>
+      <span class="questions-summary-icon">+</span>
+    </summary>
+
+    <div class="questions-content">
+      <div class="questions-section">
+        <h3>How Board Position Works</h3>
+        <p>
+          Your in-game board position is based on your weekly score, adjusted for how many scoring weeks are in the selected month.
+          Each week ends on Friday, so depending on the calendar, a month may have either 4 or 5 scoring Fridays.
+        </p>
+        <p>
+          This is why a department's board position may not look exactly the same as its total score. The board is designed to show
+          monthly progress over time, while the Department Rankings show cumulative performance and weekly averages.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Where Scores Come From</h3>
+        <p>
+          Department scores come from the Labor Cup Scorecard. For an in-depth breakdown of your score, visit the Labor Cup Scorecard
+          document to see your points in each category.
+        </p>
+
+        <div class="questions-grid">
+          <div class="questions-mini-card">
+            <h4>Forecasting Departments</h4>
+            <ul>
+              <li>Schedule: 30%</li>
+              <li>Forecast: 30%</li>
+              <li>Labor: 30%</li>
+              <li>Punch: 10%</li>
+            </ul>
+          </div>
+
+          <div class="questions-mini-card">
+            <h4>Non-Forecasting Departments</h4>
+            <ul>
+              <li>Schedule: 30%</li>
+              <li>Labor: 50%</li>
+              <li>Punch: 20%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="questions-section">
+        <h3>Base Points and Bonus Points</h3>
+        <p>
+          Both Forecasting and Non-Forecasting departments have 100 base points. Bonus points can be earned for labor effectiveness.
+          This bonus accounts for labor performance and does <strong>not</strong> reward understaffing, so departments should not attempt
+          to improve their score by intentionally understaffing.
+        </p>
+        <p>
+          Forecasting departments also have an additional bonus opportunity tied to forecast accuracy. Because Forecasting and
+          Non-Forecasting departments do not have identical scoring structures, the two groups compete separately and each group has
+          its own winner.
+        </p>
+        <p>
+          The true maximum score for Forecasting departments is 110 points. The true maximum score for Non-Forecasting departments is
+          105 points.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>How the Spire Works</h3>
+        <p>
+          Once a department makes it all the way around the board, top performers may move onto the Spire. The Spire highlights the
+          highest point earners throughout the hotel.
+        </p>
+        <p>
+          The Spire works the same way as the board: the more points a department earns, the higher up the Spire that department moves.
+          At the end of the month, the highest point value within each division determines that division's winner.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Division Winners and Prize Eligibility</h3>
+        <p>
+          Forecasting and Non-Forecasting departments compete separately. If a Forecasting department finishes second in its own division
+          but has a higher score than every Non-Forecasting department, that does not make the Forecasting department eligible for the
+          Non-Forecasting prize.
+        </p>
+        <p>
+          To win a prize, a department must win within its own division, as displayed in the Department Rankings.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>How to Read Department Rankings</h3>
+        <p>
+          In the Department Rankings, the blue total next to each department name is the department's total points so far. This is all
+          completed weeks added together and is what drives the department's ranking.
+        </p>
+        <p>
+          Below the total is the department's weekly average. This is calculated by taking all completed weekly points and dividing by
+          the number of completed weeks so far.
+        </p>
+        <p>
+          If you hover your mouse over a department, a weekly breakdown will appear showing each individual week's points and status.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Group Averages</h3>
+        <p>
+          At the bottom of each department group, the Total Average shows the average total points across all departments in that group.
+          The Week Average shows how the group performed in the most recent completed week.
+        </p>
+        <p>
+          These averages help departments compare their performance against the rest of their own division.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Within Reach and Statuses</h3>
+        <p>
+          The Within Reach section highlights departments that are close to moving up into the next performance tier. This helps identify
+          teams that may be one strong week away from improving their status.
+        </p>
+        <p>
+          Statuses are based on a weekly scale and are explained in the Scoring Legend.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Biggest Improvements</h3>
+        <p>
+          Biggest Improvements highlights departments with the strongest week-over-week improvement. This is meant to recognize bounce-back
+          moments and teams that improved significantly after a difficult previous week.
+        </p>
+        <p>
+          This section helps highlight departments that may not be in first place but are still showing strong progress and effort.
+        </p>
+      </div>
+
+      <div class="questions-section">
+        <h3>Prizes</h3>
+        <p>
+          Prize details are listed in the Rules &amp; Rewards section of the page.
+        </p>
+      </div>
+    </div>
+  </details>
+</section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
